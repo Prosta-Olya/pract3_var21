@@ -4,26 +4,29 @@
 #include <iostream>
 union Info {
     struct{
-        char FIO_mother; // ФИО матери
-        char FIO_father; // ФИО отца
+        char FIO_mother [255]; // ФИО матери
+        char FIO_father [255]; // ФИО отца
     };
     int countChildren; // количество детей
 };
 struct Form {
-    char FIO; // ФИО
+    char FIO [255]; // ФИО
     int age; // возраст
     Info info; // структура с дополнительной информацией
     bool adult; // взрослый
 
-    Form() :FIO(), age(0), adult(false) { // конструктор по умолчанию
+    Form() : age(0), adult(false) { // конструктор по умолчанию
+        strcpy(FIO, "");
         info.countChildren = 0;
     }
-    Form(char fio, int age, int children) :FIO(fio), age(age), adult(true) { // конструктор для взрослых
+    Form(char fio[255], int age, int children) : age(age), adult(true) { // конструктор для взрослых
+        strcpy(FIO, fio);
         info.countChildren = children;
     }
-    Form(char fio, int age, char mother, char father) :FIO(fio), age(age), adult(false) { // конструктор для несовершеннолетних
-        info.FIO_father = father;
-        info.FIO_mother = mother;
+    Form(char fio[255], int age, char mother[255], char father[255]) : age(age), adult(false){ // конструктор для несовершеннолетних
+        strcpy(FIO, fio);
+        strcpy(info.FIO_father, father);
+        strcpy(info.FIO_mother, mother);
     }
     void Print() { // вывод анкеты
         std::cout << "ФИО:" << FIO << "\n";
@@ -62,7 +65,9 @@ int main()
     }
     for (int i = 0; i < n;i++) {
         std::cout << "Анкета " << i + 1 << "\n";
-        char fio, father, mother;
+        char fio[255];
+        char father[255];
+        char mother[255];
         int age, children = 0;
         std::cout << "Введите ФИО:\n";
         std::cin >> fio;

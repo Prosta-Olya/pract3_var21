@@ -1,2 +1,6 @@
 ﻿  Практика 3.cpp
-  Практика 3.vcxproj -> C:\Сивер Пр-31\Практика 3\x64\Debug\Практика 3.exe
+C:\Сивер Пр-31\pract3_var21-main\Практика 3\Практика 3.cpp(19,9): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Сивер Пр-31\pract3_var21-main\Практика 3\Практика 3.cpp(23,9): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Сивер Пр-31\pract3_var21-main\Практика 3\Практика 3.cpp(27,9): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Сивер Пр-31\pract3_var21-main\Практика 3\Практика 3.cpp(28,9): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Сивер Пр-31\pract3_var21-main\Практика 3\Практика 3.cpp(29,9): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
